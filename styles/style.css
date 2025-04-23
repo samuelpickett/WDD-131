@@ -1,0 +1,35 @@
+body{
+    display: flex;
+    justify-content: center;
+    font-family: "Times New Roman", serif;
+    font-size: 20px;
+    line-height: 1.5em;
+    margin-top: 25px;
+}
+.content{
+    text-align: center;
+    width: 600px;
+    border: 1px solid rgba(0,0,0, .5);
+    padding: 50px;
+}
+
+.heading{
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 500;
+
+}
+.heading h2{
+    color: #006eb6;
+    font-size: 15px;
+    border-bottom: 1px solid rgba(0,0,0, .5);
+}
+
+main{
+    padding-top: 25px;
+    text-align: left;
+}
+.byui_logo{
+    width: 150px;
+    padding-top: 20px;
+}
