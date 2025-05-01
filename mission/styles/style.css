@@ -29,7 +29,15 @@ main{
     padding-top: 25px;
     text-align: left;
 }
-.byui_logo{
+#byui_logo{
     width: 150px;
     padding-top: 20px;
+}
+
+.dark{
+    background-color: #333;
+    color: white;
+}
+.dark h2{
+    color: #4F9ACF;
 }
