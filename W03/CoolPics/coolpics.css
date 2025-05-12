@@ -66,9 +66,6 @@ main p{
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
     }
-    figure{
-        margin:
-    }
     nav{
         display: block;
         word-spacing: 100px;
