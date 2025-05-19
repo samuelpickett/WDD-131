@@ -87,13 +87,6 @@ main p{
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
     }
-    .hide{
-        display: block;
-        word-spacing: 100px;
-    }
-    .menu{
-        display: none;
-    }
     dialog img{
     margin: 20vh auto;
     width: 50%;
