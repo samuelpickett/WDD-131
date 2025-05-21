@@ -10,6 +10,11 @@ nav{
     border-top: 2px solid #EFC69B;
     border-bottom: 2px solid #EFC69B;
 }
+
+header{
+    padding-bottom: 20px;
+}
+
 .menu{
     grid-column: 3;
     display: grid;
