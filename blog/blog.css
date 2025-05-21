@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+body{
+    margin: 0;
+}
+
+.menu{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: end;
+    font-family: Helvetica, Arial, sans-serif;
+    list-style-type: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 20px;
+    border-top: 2px solid #EFC69B;
+    border-bottom: 2px solid #EFC69B;
+}
+.menu a{
+    color: #AF1B3F;
+    text-decoration: none;
+
+}
+
+.skiptocontent a {
+    position: absolute;
+    left: -400px;
+    color: #AF1B3F;
+    text-decoration: none;
+}
+.skiptocontent a:focus {
+    left: 0px;
+}
+
+.title{
+    text-align: center;
+    font-weight: 600;
+    font-family: "Lora", Impact, serif;
+}
+
+.article{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+.book_information{
+    padding-right: 50px;
+    text-align: end;
+}
+
+.book{
+    display: grid;
+    padding-right: 20px;
+    justify-items: center;
+
+}
+
+.book_name{
+    color: #AF1B3F;
+
+}
+
+.book img{
+    width: 50%;
+}
+
+.read_more{
+    color: #AF1B3F;
+
+}
+
+.filter{
+    border: 2px solid #EFC69B;
+    text-align: center;
+}
+
+
