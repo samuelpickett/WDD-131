@@ -4,17 +4,20 @@ body{
     margin: 0;
 }
 
-.menu{
+nav{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    justify-items: end;
-    font-family: Helvetica, Arial, sans-serif;
-    list-style-type: none;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-right: 20px;
     border-top: 2px solid #EFC69B;
     border-bottom: 2px solid #EFC69B;
+}
+.menu{
+    grid-column: 3;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+    font-family: Helvetica, Arial, sans-serif;
+    list-style-type: none;
+
 }
 .menu a{
     color: #AF1B3F;
