@@ -15,6 +15,11 @@ header{
     padding-bottom: 20px;
 }
 
+main{
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+}
+
 .menu{
     grid-column: 3;
     display: grid;
@@ -48,20 +53,22 @@ header{
 
 .article{
     display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-columns: 1fr 2fr;
     font-family: Helvetica, Arial, sans-serif;
+    padding-bottom: 25px;
+    grid-column: 1;
 }
 
 .book_information{
-    padding-right: 50px;
+    padding-right: 30px;
     text-align: end;
 }
 
 .book{
     display: grid;
-    padding-right: 20px;
+    padding: 0 20px;
     justify-items: center;
-
+    border-left: 2px solid #EFC69B;
 }
 
 .book_name{
@@ -79,8 +86,13 @@ header{
 }
 
 .filter{
+    display: flex;
+    flex-flow: column;
     border: 2px solid #EFC69B;
+    margin-right: 20px;
     text-align: center;
+    grid-column: 2;
+    grid-row: 1 / span 2;
 }
 
 
