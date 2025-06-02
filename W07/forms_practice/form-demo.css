@@ -17,18 +17,16 @@ main {
     padding: 0.5em;
 }
 
-#checkoutForm{
-    display: grid;
-}
 
 label{
-    padding-top: 10px;
-    padding-bottom: 10px;
-    font-weight: 530;
+    display: block;
+    margin-bottom: 8px;
 }
 
 input, textarea, select{
-    padding: 7px;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
     border: 1px solid rgba(0, 0, 0, .25);
     border-radius: 5px;
 }
