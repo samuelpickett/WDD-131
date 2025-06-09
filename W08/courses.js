@@ -1,4 +1,5 @@
 // courses.js
+// Samuel Pickett
 const aCourse = {
     code: "CSE121b",
     name: "Javascript Language",
