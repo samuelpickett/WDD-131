@@ -1,3 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Delius+Swash+Caps&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+h1, h2{
+    font-family: "Delius Swash Caps", Arial, Helvetica, sans-serif;
+}
+:root {
+    --primary-color: #1B98E0;
+    --secondary-color: #59c3c3;
+    --text-dark: #333;
+    --text-light: #ebebeb;
+    --primary-font: Arial, Helvetica,sans-serif;
+    --secondary-font: "Delius Swash Caps";
+}
+
+img{
+    max-width: 100%;
+}
+
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 100px;
+    padding-bottom: 20px;
+    
+}
+
+.search{
+    display: flex;
+    padding-bottom: 20px;
+    justify-content: center;
+
+}
+
+.search img{
+    height: 30px;
+    padding: 5px;
+    border: 2px solid black;
+    border-radius:  0 5px 5px 0;
+}
+#search_bar{
+    border: 2px solid black;
+    margin: 0;
+    width: 80%;
+    padding: 10px;
+    border-radius: 5px 0 0 5px;
+}
+
+.recipe{
+    border: 2px solid black;
+    border-radius: 2px;
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.recipe img{
+    width: 80%;
+}
+
+
+.description{
+    display: none;
+}
+
+footer{
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    height: 100px;
+    padding-bottom: 10px;
+}
+
+.social img{
+    height: 65px;
+}
+
 .attribution{
     size: .6em;
 }
