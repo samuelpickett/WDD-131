@@ -1,7 +1,5 @@
-function create_recipe(list_of_recipe){
-	recipe_html = [];
-	for (const recipe of list_of_recipe){
-		let new_html = `
+function create_recipe(recipe){
+		return `
 		<div class="recipe">
 			<div class="recipe_img"> 
 				<img src="${recipe.image}" alt="Picture of ${recipe.name}">
@@ -23,9 +21,7 @@ function create_recipe(list_of_recipe){
 
             </div>
 		</div>`;
-		recipe_html.push(new_html);
-	}
-	return recipe_html;
+
 }
 
 function rating_to_html(rating){
@@ -48,6 +44,10 @@ function tags_to_html(list_to_convert){
 		html += `<h2>${element.charAt(0).toUpperCase() + element.slice(1)}</h2>`
 	});
 	return html
+}
+
+function random(num){
+	return Math.floor(Math.random() * num);
 }
 
 const recipes = [
@@ -332,11 +332,37 @@ const recipes = [
 	}
 ]
 
-const recipies = document.querySelector(".list_of_recipes");
+function renderRecipes(recipeList){
+	const recipe_book = document.querySelector(".list_of_recipes");
+	recipeList.forEach(recipe => {
+		recipe_book.innerHTML += create_recipe(recipe);
+})
+}
 
-let list_of_recipies = create_recipe(recipes);
-list_of_recipies.forEach(recipe => {
-	recipies.innerHTML += recipe;
-});
+function init(){
+	renderRecipes([recipes[random(recipes.length)]]);
+}
+
+function filterRecipes(query){
+	function searchCallback(obj){
+        return (obj.name.toLowerCase().includes(query.toLowerCase()) || 
+        obj.description.toLowerCase().includes(query.toLowerCase()) || 
+        obj.tags.find(tag => tag.toLowerCase().includes(query.toLowerCase())));
+    };
+	return recipes.filter(recipe => searchCallback(recipe)).sort((a,b) => a.name.localeCompare(b.name));
+}
+
+function searchHandler(){
+	event.preventDefault();
+	re = document.querySelectorAll(".recipe");
+	re.forEach(element => {element.remove();});
+	search = document.getElementById("search_bar").value.toLowerCase();
+	list_of_recipes = filterRecipes(search)
+	renderRecipes(list_of_recipes)
+}
+
+init();
+
+document.getElementById("search_icon").addEventListener("click", searchHandler)
 
 

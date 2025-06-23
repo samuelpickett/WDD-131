@@ -26,6 +26,11 @@ header{
     
 }
 
+button {
+    all: unset;
+    cursor: pointer; /* Restore cursor */
+}
+
 .search{
     display: flex;
     padding-bottom: 20px;
@@ -35,7 +40,7 @@ header{
 }
 
 .search img{
-    height: 30px;
+    height: 35px;
     padding: 5px;
     border: 2px solid black;
     border-radius:  0 5px 5px 0;
@@ -43,6 +48,7 @@ header{
 #search_bar{
     border: 2px solid black;
     margin: 0;
+    height: 49px;
     width: 80%;
     padding: 10px;
     border-radius: 5px 0 0 5px;
