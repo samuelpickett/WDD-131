@@ -1,3 +1,55 @@
+function create_recipe(list_of_recipe){
+	recipe_html = [];
+	for (const recipe of list_of_recipe){
+		let new_html = `
+		<div class="recipe">
+			<div class="recipe_img"> 
+				<img src="${recipe.image}" alt="Picture of ${recipe.name}">
+			</div>
+            <div class="recipe_info">
+                <div class="tags">
+                    ${tags_to_html(recipe.tags)}
+                </div>
+                <h1 class="recipe_name">${recipe.name}</h1>
+                <span
+                    class="rating"
+                    role="img"
+                    aria-label="Rating: ${recipe.rating} out of 5 stars"
+                >
+				${rating_to_html(recipe.rating)}
+                </span>
+
+                <p class="description">${recipe.description}</p>
+
+            </div>
+		</div>`;
+		recipe_html.push(new_html);
+	}
+	return recipe_html;
+}
+
+function rating_to_html(rating){
+	html = ""
+	for (let i = 0; i < 5; i++ ){
+		if (i < rating){
+			html += `<span aria-hidden="true" class="icon-star">⭐</span>`;
+
+		}
+		else{
+			html += `<span aria-hidden="true" class="icon-star-empty">☆</span>`;
+		}
+	}
+	return html
+}
+
+function tags_to_html(list_to_convert){
+	let html = ""
+	list_to_convert.forEach(element => {
+		html += `<h2>${element.charAt(0).toUpperCase() + element.slice(1)}</h2>`
+	});
+	return html
+}
+
 const recipes = [
 	{
 		author: 'Provo High Culinary Students',
@@ -279,3 +331,12 @@ const recipes = [
 		rating: 4
 	}
 ]
+
+const recipies = document.querySelector(".list_of_recipes");
+
+let list_of_recipies = create_recipe(recipes);
+list_of_recipies.forEach(recipe => {
+	recipies.innerHTML += recipe;
+});
+
+
